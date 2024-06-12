@@ -1,0 +1,190 @@
+body{
+    overflow-x: hidden;
+}
+
+:root{
+    --pri-col :rgb(1, 35, 34);
+    --nav-col :rgb(80, 255, 252);
+    --body-col :#012322;
+}
+.upper{
+    padding: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.name{
+    font-size:1.5vw;
+}
+
+@media only screen and (max-width:500px) {
+    .name{
+        font-size: 0px;
+    }
+}
+.search{
+    padding-right:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.search1{
+    background-color: rgb(161, 242, 214);
+    color: rgb(0, 54, 35);
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;
+    height:9%;
+    width: 15vw;
+}
+#search-navbar::placeholder{
+   font-size: 0.8rem;
+   color: rgb(0, 42, 28);
+}
+.s-btn{
+    background-color: rgb(0, 42, 28);
+    padding: 5%;
+    margin: 1%;
+    border-radius: 5px;
+    height:15%;
+    
+}
+.s-btn:hover{
+    background-color:rgb(0, 118, 67);
+}
+.cart{
+    padding: 0.4%;
+    margin: 0.2%;
+    background-color: aquamarine;
+    border-radius: 50%;
+}
+@media only screen and (max-width:500px) {
+    .cart{
+        padding: 2%;
+        margin: 0.5%;
+        background-color: aquamarine;
+        border-radius: 50%;
+    }
+}
+.cart img{
+    height: 25px;
+    width: 25px;
+
+}
+.cart:hover{
+    background-color: antiquewhite;
+}
+
+
+/* .ilinks{
+    background-color: var(--body-col);
+} */
+.links{
+   
+    width: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.link{
+    font-weight: 700;
+}
+
+.link:hover{
+    border-bottom: 5px solid white;
+}
+
+
+/* next part css for first */
+/* 
+.first{
+   
+    background-color:var(--body-col)
+} */
+.first .card{
+    border: 1px solid rgb(168, 255, 226);
+}
+.top{
+    /* background-color: var(--body-col); */
+    padding-top: 1%;
+    text-align: center;
+    color: rgb(0, 121, 81);
+    font-size: 2rem;
+    font-weight:100;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.image1 {
+        animation: slideshow1 30s infinite; /* Each image will display for 6 seconds */
+        background-size: cover;
+    }
+    
+@keyframes slideshow1 {
+    0%, 20% { background-image: url('img/s24.jpg'); }
+    40%, 60% { background-image: url('img/samsung-s24-ultra-price1705584905756.jpg'); }
+    80%, 100% { background-image: url('img/dsc00882.webp'); }
+}
+.cont{
+    font-size: 10px;
+}
+
+.image2 {
+    animation: slideshow2 30s infinite; /* Each image will display for 6 seconds */
+    background-size: cover;
+}
+
+@keyframes slideshow2 {
+0%, 20% { background-image: url('img/waffle-nav-shoes-4j1X82\ \(2\).png'); }
+40%, 60% { background-image: url('img/waffle-nav-shoes-4j1X82\ \(3\).png'); }
+80%, 100% { background-image: url('img/waffle-nav-shoes-4j1X82\ \(1\).png'); }
+}
+
+.image3 {
+    animation: slideshow3 30s infinite; /* Each image will display for 6 seconds */
+    background-size: cover;
+}
+
+@keyframes slideshow3 {
+0%, 20% { background-image: url('img/perfume3.jpg'); }
+40%, 60% { background-image: url('img/perfume2.jpg'); }
+80%, 100% { background-image: url('img/perfume1.jpg'); }
+}
+
+/* css for part1 of second */
+
+/* .second{
+    background-color: var(--body-col);
+} */
+
+.off50{
+    padding-top: 3%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+    color:rgb(221, 180, 0)
+}
+.space{
+    padding:20%
+}
+/* css for third part */
+/* .third{
+    background-color: var(--body-col);
+} */
+.bestselling{
+    padding-top: 2%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+    color:rgb(58, 130, 245);
+}
+
+.footer{
+    background-color: rgb(19 78 74);
+}
+
+/* css for lightt and dark version */
+
+

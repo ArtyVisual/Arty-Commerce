@@ -1,0 +1,238 @@
+:root{
+    --body-col:rgb(255, 249, 203);
+    --sec-col:rgb(46 110 113);
+}
+
+body{
+   
+    background-color:var(--body-col);
+  }
+
+.upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.marq{
+    margin-left: 35px;
+    color:antiquewhite;
+    font-family: cursive;
+
+}
+.top{
+    color:rgb(94, 6, 5);
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: -40;
+    background-color:var(--body-col);
+    z-index: 1000; /* Ensures it stays above other content */
+    
+  }  
+  @media only screen and (max-width:600px) {
+    .top{
+      color:rgb(85, 31, 29);
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      position: -webkit-sticky; /* For Safari */
+      position: sticky;
+      top:0;
+      background-color:var(--body-col);
+      z-index: 1000; /* Ensures it stays above other content */
+      
+    }  
+  }
+#cart{
+    padding-bottom: 3%;
+    margin: 1%;
+    border-bottom: 8px dotted #c58a00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cart-content{
+    background-color: rgb(19 78 74);
+    box-shadow: 10px 11px 13px 0px #111111;
+    width: 700px;
+    border-width: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media only screen and (max-width:500px) {
+    .cart-content{
+        width: 300px;
+        border-width: 3px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+}
+.product-image{
+    height: 200px;
+    width: 250px;
+}
+.desc{
+    top: 5;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 1%;
+}
+.product-name{
+    font-family:Arial, Helvetica, sans-serif;
+    width: 300px;
+    color:rgb(255, 245, 191);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 4%;
+    padding: 2%;
+}
+.desc2{
+    margin: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+
+}
+.product-price{
+    color:rgb(255, 245, 191);
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-left: 2%;
+    margin: 1%;
+
+}
+.input{
+    padding-left: 2%;
+    margin-top:5%;
+}
+.product-quantity{
+    width: 50px;
+    color:rgb(3, 75, 75);
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 4px;
+    border: 1px solid teal;
+    background-color: rgb(245, 245, 245);
+}
+.remove-product:hover{
+    .svgIcon path{
+        fill: aqua;
+    }
+}
+.last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tot-sec{
+    border: 1px solid #d1ba0d;
+    border-radius: 7px;
+    display: grid;
+    background-color: azure;
+    width: 40%;
+}
+.total-tag{
+    
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(1, 51, 42);
+    font-weight: 600;
+}
+#f-amount{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.total{
+    
+    text-align: center;
+    font-size:1.8rem;
+    color: rgba(0, 66, 96, 0.957);
+    font-weight: 700;
+    font-family:Georgia, 'Times New Roman', Times, serif Times, serif
+}
+
+.pay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* css for pay now button */
+
+.Btn {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  
+  .svgIcon {
+    width: 16px;
+  }
+  
+  .svgIcon path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .Btn::before {
+    width: 150px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+  }
+  
+  .Btn:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%,-50%);
+    border-radius: 0;
+  }
+  
+  .Btn:active {
+    transform: translate(5px,5px);
+    transition-duration: .3s;
+  }
+  .ikk{
+    color:#013831, #058b0e
+  }

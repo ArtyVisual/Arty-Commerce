@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cart Page</title>
+
+
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="src/output.css">
+    <script src="cart.js"></script>
+    <!-- <link rel="stylesheet" href="responsive.css"> -->
+
+</head>
+
+<body>
+    <nav class=" border-gray-200">
+        <div class="upper justify-between py-2 sm:py-0 dark:bg-teal-900">
+
+            <div class="items-center">
+                <a href="index.html" class="flex items-center pl-2 space-x-3 rtl:space-x-reverse h-10">
+                    <img src="img/BESTLOGO1.2.png" class="h-8" alt="Flowbite Logo" />
+                    <span
+                        class="  name self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ArtyVisual</span>
+                </a>
+            </div>
+            <marquee class="marq" direction="right" loop="2">We hope you had an excellent experience.</marquee>
+        </div>
+    </nav>
+    <h1 class="top">Your Cart</h1>
+
+    <div id="cart" class="py-5">
+        <div class="product" style="display:none;">
+            <div class="cart-content bg-teal-900  border-white rounded-xl mx-3 my-3">
+                <img src="" alt="" class="product-image rounded-2xl p-1">
+                <div class="flex justify-center items-center">
+
+                    <div class="desc">
+                        <p class="product-name text-center"></p>
+                        <div class="desc2">
+                            <div class="qty ">
+                                <span class="pt-1 text-gray-300">QTY:</span>
+                                <div class="input">
+                                    <!-- <input type="number" class="product-quantity text-center m-1 " min="1" max="10" value="1"> -->
+                                    <select
+                                            value="1"
+                                            class="product-quantity text-center m-1 "
+                                            placeholder="Qty"
+                                            >
+                                            <option value="" disabled>QTY</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            </select>
+        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <span class="pt-1 text-gray-300">PRICE:</span>
+                                <p class="product-price text-center"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img class="remove-product px-8"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAPFJREFUSEvtltsRgjAQRQ9YAFqB2Al0opVoJ9IJdCJWgDQADsNjouOSzfgRnUl+s5uze7OEG+FpRZ64qMENpDEc1wrtoNpBpWlGBW7higVqwIoETja4FtzbDjL26wQOtngruIEshnI4qINcklIbNxf0G2BhgPbG/RbAXZBxNa6DYgf1x45NuWx35Lr/fk0vUnsDm108oIwg66HaQu7SoSZXHC5NslSMJjeAF/U0cgWpZwU0aoXhCsMVnkzVv+I/P6cWLsBZ1aIcJDpO8QGZbNDtC3A9uY7F7phnrZq9Ab4ZzUDqWkAyKiYuq8t0BWrjvYGfW9StH8w+bzUAAAAASUVORK5CYII=" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- id is given for hidding it when there is no products in cart -->
+    <div id="last" class="last mt-10 mb-1">
+
+        <div class="tot-sec px-3 py-2">
+            <h2 class="total-tag pb-4">Your Bill:</h2>
+            <div class="flex justify-between items-center">
+                <div class="total flex">
+                    <span class="pt-1 pr-6 text-sm">Total : </span>
+                </div>
+                <div class="flex">
+                    <span class=" px-1 pt-1 text-xl">₹</span>
+                    <span id="total" class="text-xl pt-1">0</span>
+                </div>
+            </div>
+            <div class="flex justify-between items-center">
+                <div class="total flex">
+                    <span class="pt-1 pr-6 text-sm">Discount @5% : </span>
+                </div>
+                <div class="flex">
+                    <span class=" pt-2 px-1 text-xl">- ₹</span>
+                    <span id="discount" class="text-xl pt-2">0</span>
+                </div>
+            </div>
+            <div class="flex justify-between items-center">
+                <div class="total flex">
+                    <span class="pt-1 pr-6 text-sm">Round-off : </span>
+                </div>
+                <div class="flex">
+                    <span class=" pt-2 px-1 text-xl"></span>
+                    <span id="rf-amount" class="text-xl pt-2">0</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- id is given for hidding it when there is no products in cart -->
+    <div id="last1" class="last">
+        <div class="tot-sec px-3 py-2">
+
+            <div class="flex justify-between items-center">
+                <div class="total flex">
+                    <span class="pt-1 pr-6 text-lg">Final Amount : </span>
+                </div>
+                <div class="flex">
+                    <span class=" pt-1 px-1 text-xl">₹</span>
+                    <span id="f-amount" class="text-2xl pt-1 text-green-800 ">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- id is given for hidding it when there is no products in cart -->
+    <div id="last2" class="pay my-5 justify-center items-center">
+        <button class="Btn ">
+            Pay Now
+            <svg class="svgIcon" viewBox="0 0 576 512">
+                <path
+                    d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <div id="no-products" class=" text-5xl font-bold my-14 text-center text-teal-900 grid justify-center items-center "
+        style="display: none;">
+        <span>
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/fxxqebmz.json" trigger="loop" delay="1000"
+                colors="primary:#0a5c49,secondary:#0a5c15" style="width:250px;height:250px">
+            </lord-icon>
+        </span>
+        <span>
+            Oops! No Shopping Yet
+        </span>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+    <head>
+        <script src="cart.js"></script>
+        <link rel="stylesheet" href="cart.css">
+    </head>
+    <body>
+        <div class="cart-window">
+            <div class="header">
+                <h2 class="cart-title">Your Cart</h2>
+                <h1><img class="cart-close" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAASZJREFUSEvVloENwjAMBN1NYBJgE5gEmAQ2gU2ASaAn1ZEbuVSqE1osVSoo9eUT+5NGZopmJq4sDrwtvBJPEeFJkSu+tAP2haGa7ty+nPSHBa9E5FEJqmnXqtyCmc2xMvggIlcYvwan5R4C3wsr12IdBZdus3cn5D/BVH+vJ9uC8f6zuxVWfOsgOwPXNqRaqVovQmCMBYMhUAycsL2f2iWjh8Dksr0OHLUa1RQrwDOab1C+CysmiWetyQpr7PEQ1O55Xu06j5DiXCnL+zL+rgXnwUNgW9V2T+2eU+me3YbALBvwjdOvwAEOeXwYPPXsWD5YXWmqwvw7rJZwTyfOTB1QCpjnca8+DMKLmYC1wlKT6Lnb0IH/8+ttKXWjeUpfcUaBOmA28AeAXGAfKOAKNwAAAABJRU5ErkJggg=="/></h1>
+            </div>
+            
+        
+            <div class="cart-box">
+                
+                <img src="img/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg" alt="">
+                <div class="desc">
+                    <div class="cart-product-title">Ac</div>
+                    <div class="item-price">$50</div>
+                    <input type="number" value="1" class="input-quantity" name="" id=""/>
+                </div>
+                
+                <img class="item-remove" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAPFJREFUSEvtltsRgjAQRQ9YAFqB2Al0opVoJ9IJdCJWgDQADsNjouOSzfgRnUl+s5uze7OEG+FpRZ64qMENpDEc1wrtoNpBpWlGBW7higVqwIoETja4FtzbDjL26wQOtngruIEshnI4qINcklIbNxf0G2BhgPbG/RbAXZBxNa6DYgf1x45NuWx35Lr/fk0vUnsDm108oIwg66HaQu7SoSZXHC5NslSMJjeAF/U0cgWpZwU0aoXhCsMVnkzVv+I/P6cWLsBZ1aIcJDpO8QGZbNDtC3A9uY7F7phnrZq9Ab4ZzUDqWkAyKiYuq8t0BWrjvYGfW9StH8w+bzUAAAAASUVORK5CYII="/>
+                
+            </div>
+                
+                
+            
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price"></div>
+            </div>
+            <button type="button" class="btn-buy">Pay Now</button>
+        </div>
+
+    </body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="cart-window">
+        <h1>Your Cart</h1>
+
+        <div id="cart">
+            <div class="product">
+                <img src="" alt="" class="product-image">
+                <div class="desc">
+                    <p class="product-name"></p>
+                    <p class="product-price"></p>
+                    <input type="number" value="1" class="input-quantity" name="" id=""/>
+                </div>
+                <img class="item-remove" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAPFJREFUSEvtltsRgjAQRQ9YAFqB2Al0opVoJ9IJdCJWgDQADsNjouOSzfgRnUl+s5uze7OEG+FpRZ64qMENpDEc1wrtoNpBpWlGBW7higVqwIoETja4FtzbDjL26wQOtngruIEshnI4qINcklIbNxf0G2BhgPbG/RbAXZBxNa6DYgf1x45NuWx35Lr/fk0vUnsDm108oIwg66HaQu7SoSZXHC5NslSMJjeAF/U0cgWpZwU0aoXhCsMVnkzVv+I/P6cWLsBZ1aIcJDpO8QGZbNDtC3A9uY7F7phnrZq9Ab4ZzUDqWkAyKiYuq8t0BWrjvYGfW9StH8w+bzUAAAAASUVORK5CYII="/>
+            </div>
+             more product divs can be added dynamically or predefined
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price"></div>
+        </div>
+        <button type="button" class="btn-buy">Pay Now</button>
+
+    </div>
+       
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let products = JSON.parse(localStorage.getItem('products')) || [];
+            let cartElement = document.getElementById('cart');
+
+            products.forEach(product => {
+                let productDiv = document.createElement('div');
+                productDiv.className = 'product';
+
+                let productImage = document.createElement('img');
+                productImage.src = product.image;
+                productImage.alt = product.name;
+                productImage.className = 'product-image';
+
+                let productName = document.createElement('p');
+                productName.textContent = product.name;
+                productName.className = 'product-name';
+
+                let productPrice = document.createElement('p');
+                productPrice.textContent = `$${product.price}`;
+                productPrice.className = 'product-price';
+
+                productDiv.appendChild(productImage);
+                productDiv.appendChild(productName);
+                productDiv.appendChild(productPrice);
+
+                cartElement.appendChild(productDiv);
+            });
+        });
+    </script>
+</body>
+</html>
+  -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="cart.css">
+    
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div id="cart">
+        <div class="product" style="display:none;">
+            <div class="cart-content">
+                <img src="" alt="" class="product-image">
+                <div class="desc">
+                    <p class="product-name"></p>
+                    <p class="product-price"></p>
+                    <input type="number" class="product-quantity" min="1" value="1">
+
+                </div>
+                <img class="remove-product" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAPFJREFUSEvtltsRgjAQRQ9YAFqB2Al0opVoJ9IJdCJWgDQADsNjouOSzfgRnUl+s5uze7OEG+FpRZ64qMENpDEc1wrtoNpBpWlGBW7higVqwIoETja4FtzbDjL26wQOtngruIEshnI4qINcklIbNxf0G2BhgPbG/RbAXZBxNa6DYgf1x45NuWx35Lr/fk0vUnsDm108oIwg66HaQu7SoSZXHC5NslSMJjeAF/U0cgWpZwU0aoXhCsMVnkzVv+I/P6cWLsBZ1aIcJDpO8QGZbNDtC3A9uY7F7phnrZq9Ab4ZzUDqWkAyKiYuq8t0BWrjvYGfW9StH8w+bzUAAAAASUVORK5CYII="/>
+            </div>
+            </div>
+            
+    </div>
+    <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">0</div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let products = JSON.parse(localStorage.getItem('products')) || [];
+            let cartElement = document.getElementById('cart');
+            let templateProductDiv = cartElement.querySelector('.product');
+
+            products.forEach((product, index) => {
+                let productDiv = templateProductDiv.cloneNode(true);
+                productDiv.style.display = 'block';
+                let productImage = productDiv.querySelector('.product-image');
+                let productName = productDiv.querySelector('.product-name');
+                let productPrice = productDiv.querySelector('.product-price');
+                let productQuantity = productDiv.querySelector('.product-quantity');
+                let removeButton = productDiv.querySelector('.remove-product');
+
+                productImage.src = product.image;
+                productImage.alt = product.name;
+                productName.textContent = product.name;
+                productPrice.textContent = `$${product.price}`;
+                productQuantity.value = 1; // default quantity
+
+                removeButton.addEventListener('click', () => {
+                    removeProduct(index);
+                });
+
+                cartElement.appendChild(productDiv);
+                updatetotal();
+            });
+        });
+
+        function removeProduct(index) {
+            let products = JSON.parse(localStorage.getItem('products')) || [];
+            products.splice(index, 1);
+            localStorage.setItem('products', JSON.stringify(products));
+            location.reload(); // reload the page to update the cart
+            updatetotal();
+        }
+
+
+        //update total
+        function updatetotal(){
+        let products = JSON.parse(localStorage.getItem('products')) || [];
+        var cartContent=document.getElementById("cart")[0];
+        var cartBoxes = cartContent.getElementsByClassName("product");
+        var total= 0;
+        for (var i=0 ;i< cartBoxes.length; i++){
+            var cartBox =cartBoxes[i];
+            var priceElement = cartBox.getElementsByClassName('product-price')[0];
+            var QuantityElement = cartBox.getElementsByClassName('product-quantity')[0];
+            var price = parseFloat(priceElement.innerText.replace('$',''));
+            var quantity=QuantityElement.value;
+            total +=price * quantity;
+        }
+        total = Math.round(total*100)/100;
+        document.getElementsByClassName('total-price')[0].innerText= '$' + total;
+
+        }
+    </script>
+</body>
+</html> -->

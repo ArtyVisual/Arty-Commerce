@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cart Page</title>
+
+
+    <link rel="stylesheet" href="buynow.css">
+    <link rel="stylesheet" href="src/output.css">
+
+
+</head>
+
+<body>
+    <nav class=" border-gray-200">
+        <div class="upper justify-between dark:bg-teal-900">
+
+            <div class="items-center">
+                <a href="index.html" class="flex items-center pl-2 space-x-3 rtl:space-x-reverse h-10">
+                    <img src="img/BESTLOGO1.2.png" class="h-8" alt="Flowbite Logo" />
+                    <span
+                        class="  name self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Arty-Commerce</span>
+                </a>
+            </div>
+            <marquee class="marq" direction="right" loop="2">We hope you had an excellent experience.</marquee>
+        </div>
+    </nav>
+    <h1 class="top">Buy Now</h1>
+
+    <div id="cart" class="">
+        <div class="product" style="display:none;">
+            <div class="cart-content  border-white rounded-xl mx-3 my-3">
+                <img src="" alt="" class="product-image rounded-2xl p-1">
+                <div class="desc pr-20">
+                    <p class="product-name text-center"></p>
+                    <div class="desc2">
+                        <div class="qty ">
+                            <span class="pt-1 text-gray-300">QTY:</span>
+                            <div class="input">
+                                <select
+                                value="1"
+                                class="product-quantity text-center m-1 "
+                                placeholder="Qty"
+                                >
+                                <option value="" disabled>QTY</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                </select>
+
+                        </select>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <span class="pt-1 text-gray-300">PRICE:</span>
+                            <p class="product-price text-center"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- id is given for hidding it when there is no products in cart -->
+    <div id="last" class="last mt-6 mb-1">
+
+        <div class="tot-sec px-3 py-2">
+            <h2 class="total-tag pb-4">Your Bill:</h2>
+            <div class="flex justify-between items-center">
+                <div class="total flex">
+                    <span class="pt-1 pr-6 text-sm">Total : </span>
+                </div>
+                <div class="flex">
+                    <span class=" px-1 pt-1 text-xl">₹</span>
+                    <span id="total" class="text-xl pt-1">0</span>
+                </div>
+            </div>
+            <div class="flex justify-between items-center">
+                <div class="total flex">
+                    <span class="pt-1 pr-6 text-sm">Discount @5% : </span>
+                </div>
+                <div class="flex">
+                    <span class=" pt-2 px-1 text-xl">- ₹</span>
+                    <span id="discount" class="text-xl pt-2">0</span>
+                </div>
+            </div>
+            <div class="flex justify-between items-center">
+                <div class="total flex">
+                    <span class="pt-1 pr-6 text-sm">Round-off : </span>
+                </div>
+                <div class="flex">
+                    <span class=" pt-2 px-1 text-xl"></span>
+                    <span id="rf-amount" class="text-xl pt-2">0</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- id is given for hidding it when there is no products in cart -->
+    <div id="last1" class="last">
+        <div class="tot-sec px-3 py-2">
+
+            <div class="flex justify-between items-center">
+                <div class="total flex">
+                    <span class="pt-1 pr-6 text-lg">Final Amount : </span>
+                </div>
+                <div class="flex">
+                    <span class=" pt-1 px-1 text-xl">₹</span>
+                    <span id="f-amount" class="text-2xl pt-1 text-green-800 ">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- id is given for hidding it when there is no products in cart -->
+    <div id="last2" class="pay my-5 justify-center items-center">
+        <button class="Btn ">
+            Pay Now
+            <svg class="svgIcon" viewBox="0 0 576 512">
+                <path
+                    d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <script src="bn-page.js"></script>
+</body>
+
+</html>

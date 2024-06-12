@@ -1,0 +1,301 @@
+body{
+  background-color: rgb(1, 35, 34);
+}
+
+.top{
+  color:rgb(139, 219, 215);
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 2%;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: -40;
+  background-color:rgb(1, 35, 34);
+  z-index: 1000; /* Ensures it stays above other content */
+  
+}
+.tagline{
+  position: sticky;
+  top:65;
+  background-color: rgb(1, 35, 34);
+  z-index: 1000;
+  color:rgb(255, 249, 132);
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 1%;
+}
+
+@media only screen and (max-width:600px) {
+  .top{
+    color:rgb(139, 219, 215);
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 2%;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top:0;
+    background-color:rgb(1, 35, 34);
+    z-index: 1000; /* Ensures it stays above other content */
+    
+  }  
+  .tagline{
+    position: sticky;
+    top:50;
+    background-color: rgb(1, 35, 34);
+    z-index: 1000;
+    color:rgb(255, 249, 132);
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 1%;
+  }
+}
+.image1 {
+        
+        animation: slideshow1 30s infini1te; /* Each image will display for 6 seconds */
+        background-size: cover;
+    }
+    
+@keyframes slideshow1 {
+    0%, 10% { background-image: url('img/s24uv.jpg'); }
+    20%, 30% {background-image: url('img/s24ultra.jpg');}
+    40%, 50% { background-image: url('img/samsung-s24-ultra-price1705584905756.jpg'); }
+    60%, 70% { background-image: url('img/dsc00882.webp'); }
+    80%,100%{background-image: url('img/galaxy-s24-ultra-highlights-color-titanium-yellow-back-mo.jpg');}
+}
+
+
+.image2 {
+    animation: slideshow2 30s infinite; /* Each image will display for 6 seconds */
+    background-size:cover;
+}
+
+@keyframes slideshow2 {
+    0%, 20% { background-image: url('img/waffle-nav-shoes-4j1X82\ \(2\).png'); }
+    40%, 60% { background-image: url('img/waffle-nav-shoes-4j1X82\ \(3\).png'); }
+    0%, 100% { background-image: url('img/waffle-nav-shoes-4j1X82\ \(1\).png'); }
+}
+
+
+.image3 {
+    animation: slideshow3 30s infinite; /* Each image will display for 6 seconds */
+    background-size: cover;
+}
+
+@keyframes slideshow3 {
+    0%, 20% { background-image: url('img/perfume3.jpg'); }
+    40%, 60% { background-image: url('img/perfume2.jpg'); }
+    80%, 100% { background-image: url('img/perfume1.jpg'); }
+}
+
+
+/* css for like button  */
+
+.ui-bookmark {
+    --icon-size: 30px;
+    --icon-secondary-color: rgb(255, 255, 255);
+    --icon-hover-color: rgb(97, 97, 97);
+    --icon-primary-color: rgb(252, 54, 54);
+    --icon-circle-border: 1px solid var(--icon-primary-color);
+    --icon-circle-size: 35px;
+    --icon-anmt-duration: 0.3s;
+  }
+  
+  .ui-bookmark input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+  }
+  
+  .ui-bookmark .bookmark {
+    width: var(--icon-size);
+    height: auto;
+    fill: var(--icon-secondary-color);
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+  }
+  
+  .bookmark::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    -webkit-box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+    box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+    border-radius: 50%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    padding: 1px;
+  }
+  
+  .bookmark::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: var(--icon-circle-border);
+    opacity: 0;
+  }
+  
+  /* actions */
+  
+  .ui-bookmark:hover .bookmark {
+    fill: var(--icon-hover-color);
+  }
+  
+  .ui-bookmark input:checked + .bookmark::after {
+    -webkit-animation: circles var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: circles var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    -webkit-animation-delay: var(--icon-anmt-duration);
+    animation-delay: var(--icon-anmt-duration);
+  }
+  
+  .ui-bookmark input:checked + .bookmark {
+    fill: var(--icon-primary-color);
+    -webkit-animation: bookmark var(--icon-anmt-duration) forwards;
+    animation: bookmark var(--icon-anmt-duration) forwards;
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+  
+  .ui-bookmark input:checked + .bookmark::before {
+    -webkit-animation: circle var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: circle var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    -webkit-animation-delay: var(--icon-anmt-duration);
+    animation-delay: var(--icon-anmt-duration);
+  }
+  
+  @-webkit-keyframes bookmark {
+    50% {
+      -webkit-transform: scaleY(0.6);
+      transform: scaleY(0.6);
+    }
+  
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  }
+  
+  @keyframes bookmark {
+    50% {
+      -webkit-transform: scaleY(0.6);
+      transform: scaleY(0.6);
+    }
+  
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  }
+  
+  @-webkit-keyframes circle {
+    from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  
+    90% {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circle {
+    from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  
+    90% {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes circles {
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    40% {
+      opacity: 1;
+    }
+  
+    to {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circles {
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    40% {
+      opacity: 1;
+    }
+  
+    to {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+
+  /* like button css over */
+  
