@@ -19,7 +19,7 @@ body{
     font-weight: 500;
 }
 .gradient-text {
-    background: linear-gradient(90deg, #000000 30%, #f01717 33%);
+    background: linear-gradient(90deg, #000000 30%, #f71010 33%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
