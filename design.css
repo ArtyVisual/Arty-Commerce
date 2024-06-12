@@ -17,12 +17,13 @@ body{
 .name{
     font-size:1.5vw;
 }
-
-@media only screen and (max-width:500px) {
-    .name{
-        font-size: 0px;
-    }
+.gradient-text {
+    background: linear-gradient(90deg, #000000 30%, #7c0303 33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+
 .search{
     padding-right:10%;
     display: flex;
