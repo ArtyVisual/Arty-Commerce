@@ -7,13 +7,19 @@ body{
     background-color:var(--body-col);
   }
 
+  .gradient-text {
+    background: linear-gradient(90deg, #000000 30%, #7c0303 33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .upper{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .marq{
-    margin-left: 35px;
+    margin-left: 50px;
     color:antiquewhite;
     font-family: cursive;
 }

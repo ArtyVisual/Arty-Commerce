@@ -14,14 +14,13 @@ body{
     align-items: center;
     
 }
-.name{
-    font-size:1.5vw;
-}
+
 .gradient-text {
     background: linear-gradient(90deg, #000000 30%, #7c0303 33%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 
 .search{
