@@ -4,10 +4,11 @@ body{
 
 :root{
     --pri-col :rgb(1, 35, 34);
-    --nav-col :rgb(80, 255, 252);
+    --nav-col :rgb(19 78 74);
     --body-col :#012322;
 }
 .upper{
+    background-color:var(--nav-col);
     padding: 0.5%;
     display: flex;
     justify-content: space-between;
@@ -92,6 +93,7 @@ body{
     align-items: center;
     
 }
+
 .link{
     font-weight: 700;
 }

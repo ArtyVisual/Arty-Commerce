@@ -20,8 +20,9 @@ body{
 }
 .marq{
     margin-left: 50px;
-    color:antiquewhite;
+    color:rgb(34, 5, 0);
     font-family: cursive;
+    font-weight: 300;
 }
 .top{
     color:rgb(79, 15, 14);
